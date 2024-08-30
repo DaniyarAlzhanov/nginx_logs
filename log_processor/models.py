@@ -2,6 +2,8 @@ from django.db import models
 
 
 class LogEntry(models.Model):
+    """Model of nginx logs."""
+
     remote_ip = models.GenericIPAddressField()
     timestamp = models.DateTimeField()
     method = models.CharField(max_length=10)

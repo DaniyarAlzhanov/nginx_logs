@@ -5,5 +5,7 @@ from .serializers import LogEntrySerializer
 
 
 class LogEntryViewSet(viewsets.ModelViewSet):
+    """Viewset for route 'logs'."""
+
     queryset = LogEntry.objects.all()
     serializer_class = LogEntrySerializer
