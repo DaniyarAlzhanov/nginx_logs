@@ -20,10 +20,8 @@ class LogEntryAdmin(admin.ModelAdmin):
         "uri",
     )
     list_filter = (
-        "remote_ip",
         "timestamp",
         "method",
         "uri",
         "response_code",
-        "response_size",
     )

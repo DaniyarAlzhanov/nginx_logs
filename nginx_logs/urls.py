@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.urls import include
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 
@@ -10,4 +11,5 @@ router_v1.register(r"logs", LogEntryViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", include(router_v1.urls)),
 ]
